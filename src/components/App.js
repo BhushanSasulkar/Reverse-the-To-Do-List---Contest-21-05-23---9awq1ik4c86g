@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 
-function ToDo() {
+function ToDo({ todoId, createdAt }) {
   return (
     <tr>
       <td>
-        <p>{todoid}</p>
+        <p>{todoId}</p>
       </td>
       <td>
-        <input placeholder="Enter Text here" />
+        <input placeholder="Enter text here" />
       </td>
       <td>
         <p>{createdAt}</p>
@@ -39,7 +39,7 @@ function App() {
       <table>
         <tbody>
           {todos.map((todo) => (
-            <ToDo key={todo.id} todoid={todo.id} createdAt={todo.createdAt} />
+            <ToDo key={todo.id} todoId={todo.id} createdAt={todo.createdAt} />
           ))}
         </tbody>
       </table>
